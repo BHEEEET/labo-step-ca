@@ -1,0 +1,25 @@
+{
+  "authority": {
+    "type": "root",
+    "provisioners": [
+      {
+        "name": "acme",
+        "type": "ACME",
+        "claims": {
+          "maxTLSCertDuration": "24h",
+          "defaultTLSCertDuration": "24h"
+        }
+      }
+    ]
+  },
+  "dnsNames": [
+    "test.local",
+    "www.hallo.be"
+  ],
+  "acme": {
+    "enabled": true,
+    "http01": {
+      "address": ":4433"
+    }
+  }
+}
